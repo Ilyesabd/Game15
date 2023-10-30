@@ -1,5 +1,5 @@
-import javax.swing.;
-import java.awt.;
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 
 public class MyFrame extends JFrame {
