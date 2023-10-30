@@ -1,29 +1,32 @@
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.;
+import java.awt.;
+import java.util.ArrayList;
 
-public class MyFrame extends JFrame{
+public class MyFrame extends JFrame {
 
-        MyFrame () {
+    MyFrame() {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JButton button = new JButton("New Game");
-
         this.setTitle("Game of 15");
-        this.add(button);
-        this.setVisible(true);
+        this.setLayout(new GridLayout(4, 4));
+
+        ArrayList<JButton> buttons = new ArrayList<>();
+
+        for (int i = 1; i <= 15; i++) {
+            JButton button = new JButton(Integer.toString(i));
+            buttons.add(button);
+            this.add(button);
+        }
+
+        JButton emptyButton = new JButton("");
+        buttons.add(emptyButton);
+        this.add(emptyButton);
+
         this.pack();
         this.setLocationRelativeTo(null);
         ImageIcon image = new ImageIcon("src/EA.jpg");
         this.setIconImage(image.getImage());
         this.getContentPane().setBackground(Color.CYAN);
 
-
-
-
+        this.setVisible(true);
     }
-
-
-    }
-
-
-
-
+}
