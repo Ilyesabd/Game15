@@ -1,17 +1,21 @@
 import javax.swing.*;
+import java.awt.*;
 
+public class MyFrame extends JFrame{
 
-public class MyFrame{
-
-    public static void main(String[] args) {
-
-        JFrame frame = new JFrame("Game of 15");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        MyFrame () {
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JButton button = new JButton("New Game");
-        frame.add(button);
-        frame.setVisible(true);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
+
+        this.setTitle("Game of 15");
+        this.add(button);
+        this.setVisible(true);
+        this.pack();
+        this.setLocationRelativeTo(null);
+        ImageIcon image = new ImageIcon("src/EA.jpg");
+        this.setIconImage(image.getImage());
+        this.getContentPane().setBackground(Color.CYAN);
+
 
 
 
