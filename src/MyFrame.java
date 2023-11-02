@@ -21,6 +21,8 @@ public class MyFrame extends JFrame implements ActionListener {
         newGameButton.addActionListener(e -> shuffleTiles());
         newGamePanel.add(newGameButton, BorderLayout.NORTH);
         this.add(newGamePanel, BorderLayout.NORTH);
+        ImageIcon image = new ImageIcon("src/EA.jpg");
+        this.setIconImage(image.getImage());
 
         JPanel gamePanel = new JPanel(new GridLayout(4, 4));
 
