@@ -18,15 +18,19 @@ public class MyFrame extends JFrame implements ActionListener {
 
         JPanel newGamePanel = new JPanel(new BorderLayout());
         JButton newGameButton = new JButton("New Game");
+        newGameButton.setBackground(new Color(59832));
         newGameButton.addActionListener(e -> shuffleTiles());
         newGamePanel.add(newGameButton, BorderLayout.NORTH);
         this.add(newGamePanel, BorderLayout.NORTH);
         ImageIcon image = new ImageIcon("src/EA.jpg");
         this.setIconImage(image.getImage());
 
+
         JPanel gamePanel = new JPanel(new GridLayout(4, 4));
 
+
         buttons = new JButton[4][4];
+
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
