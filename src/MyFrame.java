@@ -43,6 +43,7 @@ public class MyFrame extends JFrame implements ActionListener {
         emptyButtonX = 3;
         emptyButtonY = 3;
         buttons[emptyButtonX][emptyButtonY].setVisible(false);
+        shuffleTiles();
 
         this.add(gamePanel, BorderLayout.CENTER);
 
@@ -80,7 +81,8 @@ public class MyFrame extends JFrame implements ActionListener {
         emptyButtonY = y;
     }
 
-    private void shuffleTiles() {
+
+   private void shuffleTiles() {
         ArrayList<Integer> values = new ArrayList<>();
 
         for (int i = 1; i <= 15; i++) {
